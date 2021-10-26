@@ -62,7 +62,7 @@
     <tr>
     
       <td><div class="col-xs-10 text-left" style="font-size: 7px !important;">
-      Cliente:
+      Cliente: Probando el cliente
       <br/>
       <div class="col-xs-10 text-left">      
       <span t-field="move.partner_id.name"/>
