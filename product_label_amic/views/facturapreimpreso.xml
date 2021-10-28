@@ -12,7 +12,7 @@
         <field name="margin_left">1</field>
         <field name="margin_right">1</field>
         <field name="header_line" eval="False"/>
-        <field name="header_spacing">1</field>
+        <field name="header_spacing">100</field>
         <field name="dpi">80</field>
     </record>
     <!-- <record id="unique_sequence_id" model="ir.sequence">
@@ -62,7 +62,7 @@
     <tr>
     
       <td><div class="col-xs-10 text-left" style="font-size: 7px !important;">
-      Cliente: Probando el cliente
+      Cliente:
       <br/>
       <div class="col-xs-10 text-left">      
       <span t-field="move.partner_id.name"/>
