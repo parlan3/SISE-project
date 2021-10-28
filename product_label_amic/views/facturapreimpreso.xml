@@ -55,9 +55,15 @@
         <tr t-foreach="lines" t-as="move">
           
           
-            <div style="width: 32%; display: inline-table; height:10rem;">
+            <div style="width: 32%; display: inline-table; height:14rem;">
 
 <table class="table table-bordered mb-0" style="border: 1px solid black;">
+  <thead>
+    <tr>
+      <th style="width: 30%">Col 1</th>
+      <th style="width: 20%">Col 2</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
     
