@@ -125,7 +125,7 @@
       </td>
       <td> <div class="col-xs-10 text-left" style="font-size: 7px !important;">
       DESCRIPCIÓN:
-        <span t-field="move.product_id.costumer_ids.customerinfo.product_name"/>
+        <span t-field="move.product_id.customer_ids.customerinfo.product_name"/>
 </div>
 </td>
     </tr>
