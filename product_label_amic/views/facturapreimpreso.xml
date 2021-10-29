@@ -135,7 +135,7 @@
     <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.product_uom_qty, 600, 100)" style="width:200px;height:20px"/>
     </div>
     </td>
-      <td><div class="col-xs-10 text-left" style="font-size: 7px !important;">
+      <td><div class="col-xs-10 text-left" style="font-size: 5px !important;">
       <table class="table table-bordered">
             <tbody>
                 <tr>
