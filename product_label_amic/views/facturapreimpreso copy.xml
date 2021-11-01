@@ -9,7 +9,7 @@
         <field name="orientation">Landscape</field>
         <field name="margin_top">5</field>
         <field name="margin_bottom">0</field>
-        <field name="margin_left">1</field>
+        <field name="margin_left">100</field>
         <field name="margin_right">1</field>
         <field name="header_line" eval="False"/>
         <field name="header_spacing">100</field>
@@ -26,7 +26,9 @@
     </record> -->
 
 <template id="report_delivery_document_inherit" inherit_id="stock.report_delivery_document">
-<xpath expr="//div[@class='page']" position="replace">
+<xpath expr="//t[@t-call='web.external_layout']" position="replace">
+<t t-call="web.internal_layout">
+<t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)" />
 <t t-set="i" t-value="1" />
     <!-- <table class="table table-condensed mt48" t-if="o.state!='done'">
         <t t-set="lines" t-value="o.move_lines.filtered(lambda x: x.product_uom_qty)"/>
@@ -51,13 +53,13 @@
     </table> -->
 
 
-    <t t-set="lines" t-value="o.move_lines.filtered(lambda x: x.product_uom_qty)"/>
+    <t t-set="lines" t-value="o.move_lines"/>
         <tr t-foreach="lines" t-as="move">
           
           
-            <div style="width: 32%; display: inline-table; height:14rem;">
+            <div style="width: 45%; display: inline-table; height:14rem; !important;">
 
-<table class="table table-bordered mb-0" style="border: 1px solid black;">
+<table class="table table-bordered mb-0">
   <tbody>
     <tr>
     
@@ -172,7 +174,7 @@
 </table>
   </div>
   </tr>
-
+</t>
     </xpath>
 </template>
 
