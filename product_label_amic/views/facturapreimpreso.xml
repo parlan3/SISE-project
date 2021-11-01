@@ -54,7 +54,7 @@
 
 
         <tr t-foreach="o.move_lines" t-as="move">
-          <tr t-foreach="move.product_uom_qty" t-as="product_uom_qty">
+          <tr t-foreach="int(move.product_uom_qty)" t-as="product_uom_qty">
 
             <div style="width: 45%; display: inline-table; height:14rem; !important;">
 
