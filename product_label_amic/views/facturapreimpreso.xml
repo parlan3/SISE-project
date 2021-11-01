@@ -27,6 +27,7 @@
 
 <template id="report_delivery_document_inherit" inherit_id="stock.report_delivery_document">
 <xpath expr="//t[@t-call='web.external_layout']" position="replace">
+<t t-call="web.external_layout">
 <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)" />
 <t t-set="i" t-value="1" />
     <!-- <table class="table table-condensed mt48" t-if="o.state!='done'">
