@@ -140,7 +140,7 @@
                     <table class="table table-bordered">
                           <tbody>
                               <tr>
-                                  <td scope="row">PESO NETO(KG): <span t-field="move.product_id.uom_id.factor_inv * move.product_id.weight"/></td>
+                                  <td scope="row">PESO NETO(KG): <span t-field="move.product_id.uom_id.factor_inv * float(move.product_id.weight)"/></td>
                                   <td>PESO BRUTO(KG): <span t-field="move.product_id.weight"/>
                                   </td>
                                   <td>NÚMERO DE CAJAS: <span t-field="move.quantity_done"/></td>
