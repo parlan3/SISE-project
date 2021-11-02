@@ -164,8 +164,8 @@
                     </div>
                     </td>
                     <td><div class="col-sm-10 text-left" style="font-size: 8px !important;">
-                    LOTE N°(H):  <span t-field="move.product_id.lot_id"/>
-                  <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.product_id.lot_id, 600, 100)" style="width:200px;height:20px"/>
+                    LOTE N°(H):  <span t-field="move.lot_id"/>
+                  <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.lot_id, 600, 100)" style="width:200px;height:20px"/>
                     </div>
                     </td>
                   </tr>
