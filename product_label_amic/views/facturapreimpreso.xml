@@ -90,7 +90,8 @@
                   </tr>
                   <tr>
                     <td><div class="col-sm-10 text-left" style="font-size: 8px !important;">
-                    N° DE DOCUMENTO(N):  <span t-field="substring(o.name, 7)"/>
+                    N° DE DOCUMENTO(N):  <span t-if="o.name" t-esc="str(o.name)[:7]"/>
+                    <span t-field="o.name"/>
                   <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', o.name, 600, 100)" style="width:200px;height:20px"/>
                   </div>
                   </td>
