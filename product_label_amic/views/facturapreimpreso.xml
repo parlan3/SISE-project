@@ -63,7 +63,7 @@
                   <tbody>
                     <tr>
                     
-                      <td><div class="col-sm-10 text-left" style="font-size: 7px !important;">
+                      <td><div class="col-sm-10 text-left" style="font-size: 6px !important;">
                       Cliente:
                       <br/>
                       <div class="col-sm-10 text-left">      
@@ -73,7 +73,7 @@
                       </div>
                       </div>
                       </td>
-                      <td><div class="col-sm-10 text-left" style="font-size: 7px !important;">
+                      <td><div class="col-sm-10 text-left" style="font-size: 6px !important;">
                       Direccion del proveedor:
                       <br/>
                       <div class="col-sm-10 text-left">
@@ -90,12 +90,12 @@
                 </td>
                     </tr>
                     <tr>
-                      <td><div class="col-sm-10 text-left" style="font-size: 7px !important;">
+                      <td><div class="col-sm-10 text-left" style="font-size: 6px !important;">
                       N° DE DOCUMENTO(N):<span t-field="o.name"/>
                   <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', o.name, 600, 100)" style="width:200px;height:20px"/>
                   </div>
                     </td>
-                      <td><div class="col-sm-10 text-left" style="font-size: 7px !important;">
+                      <td><div class="col-sm-10 text-left" style="font-size: 6px !important;">
                       Datos a completar por calidad
                       <table class="table table-bordered">
                             <tbody>
@@ -111,7 +111,7 @@
                     </tr>
                     <tr>
                       <td colspan="2">
-                        <div class="col-sm-10 text-left" style="font-size: 7px !important;">
+                        <div class="col-sm-10 text-left" style="font-size: 6px !important;">
                           Pieza de referencia(P):
                           <span t-foreach="move.product_id.customer_ids" t-as="customer_id">
                             <t t-if="customer_id.name == o.partner_id">
@@ -123,14 +123,14 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><div class="col-sm-10 text-left" style="font-size: 7px !important;">
+                      <td><div class="col-sm-10 text-left" style="font-size: 6px !important;">
                       CANTIDAD:
                       <span t-field="move.product_id.uom_id.factor_inv"/>
                         <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.product_id.uom_id.factor_inv, 600, 100)" style="width:200px;height:20px"/>
                       </div>
                       </td>
                       <td> 
-                      <div class="col-sm-10 text-left" style="font-size: 7px !important;">
+                      <div class="col-sm-10 text-left" style="font-size: 6px !important;">
                       DESCRIPCIÓN:
                       <span t-foreach="move.product_id.customer_ids" t-as="customer_id">
                             <t t-if="customer_id.name == o.partner_id">
@@ -141,14 +141,14 @@
                 </td>
                     </tr>
                     <tr>
-                      <td> <div class="col-sm-10 text-left" style="font-size: 7px !important;">
+                      <td> <div class="col-sm-10 text-left" style="font-size: 6px !important;">
                       PROVEEDOR(V):  
                       <span t-field="move.order_ref.client_order_ref"/>
                     <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.order_ref.client_order_ref, 600, 100)" style="width:200px;height:20px"/>
                     </div>
                     </td>
                       <td>
-                        <div class="col-sm-10 text-left" style="font-size: 7px !important; padding: 1px !important;">
+                        <div class="col-sm-10 text-left" style="font-size: 6px !important; padding: 1px !important;">
                           <table class="table table-bordered" style="padding: 1px !important;">
                                 <tbody>
                                     <tr>
@@ -167,7 +167,7 @@
                       </td>
                     </tr>
                     <tr>
-                    <td> <div class="col-sm-10 text-left" style="font-size: 7px !important;">
+                    <td> <div class="col-sm-10 text-left" style="font-size: 6px !important;">
                     <t t-set="nro_tarjeta" t-value="datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%y')+''+datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%m')+''+datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%d')+''+str(i)" />
                     N° DE TARJETA(S):  <span t-esc="nro_tarjeta"/>
                     <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', nro_tarjeta, 600, 100)" style="width:200px;height:20px"/>
@@ -175,7 +175,7 @@
                       </div>
                       </td>
                       <td>
-                        <div class="col-sm-10 text-left" style="font-size: 7px !important;">
+                        <div class="col-sm-10 text-left" style="font-size: 6px !important;">
                           LOTE N°(H):  <span t-field="active_move_line_ids.lot_id"/>
                           <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', active_move_line_ids.lot_id, 600, 100)" style="width:200px;height:20px"/>
                         </div>
