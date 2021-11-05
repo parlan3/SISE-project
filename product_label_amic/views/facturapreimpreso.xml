@@ -198,7 +198,7 @@
           <tr t-foreach="move.active_move_line_ids" t-as="active_move_line_ids">
             <tr t-foreach="int(active_move_line_ids.qty_done)" t-as="qty_done">
 
-              <div style="width: 45%; display: inline-table; height:10rem; !important;">
+              <div style="width: 45%; display: inline-table; height:5rem; !important;">
 
                 <table class="table table-bordered mb-0">
                   <tbody>
