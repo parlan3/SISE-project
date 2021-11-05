@@ -57,7 +57,7 @@
         <tr t-foreach="o.move_lines" t-as="move">
 
         <!-- Si son kg -->
-   <span t-if="move.product_uom == like '%kg%'">
+   <span t-if="move.product_uom.name == like '%kg%'">
           <tr t-foreach="move.active_move_line_ids" t-as="active_move_line_ids">
               <div style="width: 45%; display: inline-table; height:10rem; !important;">
 
