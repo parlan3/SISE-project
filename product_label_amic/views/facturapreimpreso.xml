@@ -192,7 +192,7 @@
               </div>
 
           </tr>
-          <t t-else/>
+          <t t-else=""/>
 <!-- Si no es kg -->
           <tr t-foreach="move.active_move_line_ids" t-as="active_move_line_ids">
             <tr t-foreach="int(active_move_line_ids.qty_done)" t-as="qty_done">
