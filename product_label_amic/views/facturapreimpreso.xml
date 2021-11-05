@@ -192,9 +192,9 @@
               </div>
 
           </tr>
-          </t>
+          <t t-else/>
 <!-- Si no es kg -->
-          <!-- <tr t-foreach="move.active_move_line_ids" t-as="active_move_line_ids">
+          <tr t-foreach="move.active_move_line_ids" t-as="active_move_line_ids">
             <tr t-foreach="int(active_move_line_ids.qty_done)" t-as="qty_done">
 
               <div style="width: 45%; display: inline-table; height:10rem; !important;">
@@ -328,7 +328,8 @@
               </div>
 
             </tr>
-          </tr> -->
+          </tr>
+          </t>
         </tr>
       </t>
     </xpath>
