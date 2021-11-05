@@ -59,7 +59,7 @@
 
         <!-- Si son kg -->
         
-   <div t-if="move.product_uom.name == kg">
+   <t t-if="'kg' in move.product_uom.name ">
           <tr t-foreach="move.active_move_line_ids" t-as="active_move_line_ids">
               <div style="width: 45%; display: inline-table; height:10rem; !important;">
 
@@ -192,7 +192,7 @@
               </div>
 
           </tr>
-          </div>
+          </t>
 <!-- Si no es kg -->
           <tr t-foreach="move.active_move_line_ids" t-as="active_move_line_ids">
             <tr t-foreach="int(active_move_line_ids.qty_done)" t-as="qty_done">
