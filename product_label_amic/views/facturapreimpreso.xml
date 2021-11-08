@@ -296,7 +296,7 @@
                                 <tbody>
                                     <tr>
                                         <t t-set="peso_neto_bruto" t-value="(float(move.product_id.uom_id.factor_inv) * float(move.product_id.weight))" />
-                                        <td scope="row">PESO NETO(KG): <t t-esc="peso_neto_bruto"/></td>
+                                        <td scope="row">PESO NETO(KG): <t t-esc="peso_neto_bruto" t-options='{"widgets": "float", "precision": 2}'/></td>
                                         <td>PESO BRUTO(KG): <t t-esc="peso_neto_bruto"/></td>
                                         <td>NÚMERO DE CAJAS: <span t-field="move.quantity_done"/></td>
                                     </tr>
