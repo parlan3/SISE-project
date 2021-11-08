@@ -164,7 +164,7 @@
                                         <td>NÚMERO DE CAJAS: <span t-field="move.quantity_done"/></td>
                                     </tr>
                                     <tr>
-                                        <td scope="row">FECHA: <span t-field="move.date_expected"/></td>
+                                        <td scope="row">FECHA: <span t-field="datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%d-%m-%y')"/></td>
                                         <td colspan="2">MODIFICACION DE INGENIERIA:</td>
                                     </tr>
                                 </tbody>
