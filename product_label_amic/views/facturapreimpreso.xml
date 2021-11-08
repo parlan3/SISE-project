@@ -61,7 +61,7 @@
         
    <t t-if="'kg' in move.product_uom.name ">
           <tr t-foreach="move.active_move_line_ids" t-as="active_move_line_ids">
-              <div style="width: 45%; display: inline-table; height:10rem; !important;">
+              <div style="width: 45%; display: inline-table; height:5rem; !important;">
 
                 <table class="table table-bordered mb-0">
                   <tbody>
