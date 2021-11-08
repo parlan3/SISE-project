@@ -106,8 +106,8 @@
                       <table class="table table-bordered">
                             <tbody>
                                 <tr>
-                                    <td scope="row"><strong OK/></td>
-                                    <td><strong NO OK/></td>
+                                    <td scope="row"><strong> OK</strong></td>
+                                    <td><strong> NO OK </strong></td>
                                     <td>Observado</td>
                                 </tr>
                             </tbody>
@@ -243,8 +243,8 @@
                       <table class="table table-bordered">
                             <tbody>
                                 <tr>
-                                    <td scope="row"><strong OK/></td>
-                                    <td><strong NO OK /></td>
+                                    <td scope="row"><strong> OK</strong></td>
+                                    <td><strong> NO OK </strong></td>
                                     <td>Observado</td>
                                 </tr>
                             </tbody>
