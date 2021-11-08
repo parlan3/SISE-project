@@ -161,7 +161,7 @@
                                         <t t-set="peso_neto_bruto" t-value="(float(move.product_id.uom_id.factor_inv) * float(move.product_id.weight))" />
                                         <td scope="row">PESO NETO(KG): <t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></td>
                                         <td>PESO BRUTO(KG): <t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></td>
-                                        <td>NÚMERO DE CAJAS: <span t-field="move.quantity_done" t-options='{"widget": "float", "precision": 2}'/></td>
+                                        <td>NÚMERO DE CAJAS: <span t-field="active_move_line_ids.qty_done" t-options='{"widget": "float", "precision": 2}'/></td>
                                     </tr>
                                     <tr>
                                         <td scope="row">FECHA: <span t-field="move.date_expected" t-field-options="{'format': 'dd-MM-yyyy'}"/></td>
@@ -298,7 +298,7 @@
                                         <t t-set="peso_neto_bruto" t-value="(float(move.product_id.uom_id.factor_inv) * float(move.product_id.weight))" />
                                         <td scope="row">PESO NETO(KG): <t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></td>
                                         <td>PESO BRUTO(KG): <t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></td>
-                                        <td>NÚMERO DE CAJAS: <span t-field="move.quantity_done" t-options='{"widget": "float", "precision": 2}'/></td>
+                                        <td>NÚMERO DE CAJAS: <span t-field="active_move_line_ids.qty_done" t-options='{"widget": "float", "precision": 2}'/></td>
                                     </tr>
                                     <tr>
                                         <td scope="row">FECHA: <span t-field="move.date_expected" t-field-options="{'format': 'dd-MM-yyyy'}"/></td>
