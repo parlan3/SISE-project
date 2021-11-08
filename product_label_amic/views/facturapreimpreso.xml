@@ -29,7 +29,7 @@
 <xpath expr="//t[@t-call='web.external_layout']" position="replace">
 <t t-call="web.internal_layout">
 <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)" />
-<t t-set="i" t-value="1" />
+<t t-set="i" t-value="0,001" />
 <t t-set="kg" t-value="kg" />
     <!-- <table class="table table-condensed mt48" t-if="o.state!='done'">
         <t t-set="lines" t-value="o.move_lines.filtered(lambda x: x.product_uom_qty)"/>
@@ -173,10 +173,11 @@
                     </tr>
                     <tr>
                     <td> <div class="col-sm-10 text-left" style="font-size: 7px !important;">
-                    <t t-set="nro_tarjeta" t-value="datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%y')+''+datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%m')+''+datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%d')+''+str(i)" />
+                    <t t-set="nro" t-value="i[1:]"
+                    <t t-set="nro_tarjeta" t-value="datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%y')+''+datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%m')+''+datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%d')+''+str(nro)" />
                     N° DE TARJETA(S):  <span t-esc="nro_tarjeta"/>
                     <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', nro_tarjeta, 600, 100)" style="width:200px;height:20px"/>
-                      <t t-set="i" t-value="i+1"/>
+                      <t t-set="i" t-value="i+0,001"/>
                       </div>
                       </td>
                       <td>
