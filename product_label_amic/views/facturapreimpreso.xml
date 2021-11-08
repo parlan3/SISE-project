@@ -97,7 +97,7 @@
                     </tr>
                     <tr>
                       <td><div class="col-sm-10 text-left" style="font-size: 7px !important;">
-                      N° DE DOCUMENTO(N):<span t-field="o.name"/>
+                      N° DE DOCUMENTO(N):<strong t-field="o.name"/>
                   <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', o.name, 600, 100)" style="width:200px;height:20px"/>
                   </div>
                     </td>
@@ -106,8 +106,8 @@
                       <table class="table table-bordered">
                             <tbody>
                                 <tr>
-                                    <td scope="row">OK</td>
-                                    <td>NO OK</td>
+                                    <td scope="row"><strong OK/></td>
+                                    <td><strong NO OK/></td>
                                     <td>Observado</td>
                                 </tr>
                             </tbody>
@@ -121,7 +121,7 @@
                           Pieza de referencia(P):
                           <span t-foreach="move.product_id.customer_ids" t-as="customer_id">
                             <t t-if="customer_id.name == o.partner_id">
-                              <span t-field="customer_id.product_code"/>
+                              <strong t-field="customer_id.product_code"/>
                               <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', customer_id.product_code, 600, 100)" style="width:200px;height:20px"/>
                             </t>
                           </span>
@@ -131,7 +131,7 @@
                     <tr>
                       <td><div class="col-sm-10 text-left" style="font-size: 7px !important;">
                       CANTIDAD:
-                      <span t-field="move.product_id.uom_id.factor_inv"/>
+                      <strong t-field="move.product_id.uom_id.factor_inv"/>
                         <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.product_id.uom_id.factor_inv, 600, 100)" style="width:200px;height:20px"/>
                       </div>
                       </td>
@@ -140,7 +140,7 @@
                       DESCRIPCIÓN:
                       <span t-foreach="move.product_id.customer_ids" t-as="customer_id">
                             <t t-if="customer_id.name == o.partner_id">
-                              <span t-field="customer_id.product_name"/>
+                              <strong t-field="customer_id.product_name"/>
                             </t>
                       </span>
                       </div>
@@ -149,7 +149,7 @@
                     <tr>
                       <td> <div class="col-sm-10 text-left" style="font-size: 7px !important;">
                       PROVEEDOR(V):  
-                      <span t-field="o.sale_id.client_order_ref"/>
+                      <strong t-field="o.sale_id.client_order_ref"/>
                     <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.order_ref.client_order_ref, 600, 100)" style="width:200px;height:20px"/>
                     </div>
                     </td>
@@ -159,12 +159,12 @@
                                 <tbody>
                                     <tr>
                                         <t t-set="peso_neto_bruto" t-value="(float(move.product_id.uom_id.factor_inv) * float(move.product_id.weight))" />
-                                        <td scope="row">PESO NETO(KG): <t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></td>
-                                        <td>PESO BRUTO(KG): <t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></td>
-                                        <td>NÚMERO DE CAJAS: <span t-field="active_move_line_ids.qty_done" t-options='{"widget": "float", "precision": 2}'/></td>
+                                        <td scope="row">PESO NETO(KG): <strong><t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></strong></td>
+                                        <td>PESO BRUTO(KG): <strong><t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></strong></td>
+                                        <td>NÚMERO DE CAJAS: <strong><span t-field="active_move_line_ids.qty_done" t-options='{"widget": "float", "precision": 2}'/></strong></td>
                                     </tr>
                                     <tr>
-                                        <td scope="row">FECHA: <span t-field="move.date_expected" t-field-options="{'format': 'dd-MM-yyyy'}"/></td>
+                                        <td scope="row">FECHA: <strong><span t-field="move.date_expected" t-field-options="{'format': 'dd-MM-yyyy'}"/></strong></td>
                                         <td colspan="2">MODIFICACION DE INGENIERIA:</td>
                                     </tr>
                                 </tbody>
@@ -175,14 +175,14 @@
                     <tr>
                     <td> <div class="col-sm-10 text-left" style="font-size: 7px !important;">
                     <t t-set="nro_tarjeta" t-value="datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%y')+''+datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%m')+''+datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%d')+''+(str(i)[2:])" />
-                    N° DE TARJETA(S):  <span t-esc="nro_tarjeta"/>
+                    N° DE TARJETA(S):  <strong t-esc="nro_tarjeta"/>
                     <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', nro_tarjeta, 600, 100)" style="width:200px;height:20px"/>
                       <t t-set="i" t-value="i+0.001"/>
                       </div>
                       </td>
                       <td>
                         <div class="col-sm-10 text-left" style="font-size: 7px !important;">
-                          LOTE N°(H):  <span t-field="active_move_line_ids.lot_id"/>
+                          LOTE N°(H):  <strong t-field="active_move_line_ids.lot_id"/>
                           <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', active_move_line_ids.lot_id, 600, 100)" style="width:200px;height:20px"/>
                         </div>
                       </td>
@@ -234,7 +234,7 @@
                     </tr>
                     <tr>
                       <td><div class="col-sm-10 text-left" style="font-size: 7px !important;">
-                      N° DE DOCUMENTO(N):<span t-field="o.name"/>
+                      N° DE DOCUMENTO(N):<strong t-field="o.name"/>
                   <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', o.name, 600, 100)" style="width:200px;height:20px"/>
                   </div>
                     </td>
@@ -243,8 +243,8 @@
                       <table class="table table-bordered">
                             <tbody>
                                 <tr>
-                                    <td scope="row">OK</td>
-                                    <td>NO OK</td>
+                                    <td scope="row"><strong OK/></td>
+                                    <td><strong NO OK /></td>
                                     <td>Observado</td>
                                 </tr>
                             </tbody>
@@ -258,7 +258,7 @@
                           Pieza de referencia(P):
                           <span t-foreach="move.product_id.customer_ids" t-as="customer_id">
                             <t t-if="customer_id.name == o.partner_id">
-                              <span t-field="customer_id.product_code"/>
+                              <strong t-field="customer_id.product_code"/>
                               <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', customer_id.product_code, 600, 100)" style="width:200px;height:20px"/>
                             </t>
                           </span>
@@ -268,7 +268,7 @@
                     <tr>
                       <td><div class="col-sm-10 text-left" style="font-size: 7px !important;">
                       CANTIDAD:
-                      <span t-field="move.product_id.uom_id.factor_inv"/>
+                      <strong t-field="move.product_id.uom_id.factor_inv"/>
                         <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.product_id.uom_id.factor_inv, 600, 100)" style="width:200px;height:20px"/>
                       </div>
                       </td>
@@ -277,7 +277,7 @@
                       DESCRIPCIÓN:
                       <span t-foreach="move.product_id.customer_ids" t-as="customer_id">
                             <t t-if="customer_id.name == o.partner_id">
-                              <span t-field="customer_id.product_name"/>
+                              <strong t-field="customer_id.product_name"/>
                             </t>
                       </span>
                       </div>
@@ -286,7 +286,7 @@
                     <tr>
                       <td> <div class="col-sm-10 text-left" style="font-size: 7px !important;">
                       PROVEEDOR(V):  
-                      <span t-field="o.sale_id.client_order_ref"/>
+                      <strong t-field="o.sale_id.client_order_ref"/>
                     <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.order_ref.client_order_ref, 600, 100)" style="width:200px;height:20px"/>
                     </div>
                     </td>
@@ -296,12 +296,12 @@
                                 <tbody>
                                     <tr>
                                         <t t-set="peso_neto_bruto" t-value="(float(move.product_id.uom_id.factor_inv) * float(move.product_id.weight))" />
-                                        <td scope="row">PESO NETO(KG): <t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></td>
-                                        <td>PESO BRUTO(KG): <t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></td>
-                                        <td>NÚMERO DE CAJAS: <span t-field="active_move_line_ids.qty_done" t-options='{"widget": "float", "precision": 2}'/></td>
+                                        <td scope="row">PESO NETO(KG): <strong><t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></strong></td>
+                                        <td>PESO BRUTO(KG): <strong><t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></strong></td>
+                                        <td>NÚMERO DE CAJAS: <strong><span t-field="active_move_line_ids.qty_done" t-options='{"widget": "float", "precision": 2}'/></strong></td>
                                     </tr>
                                     <tr>
-                                        <td scope="row">FECHA: <span t-field="move.date_expected" t-field-options="{'format': 'dd-MM-yyyy'}"/></td>
+                                        <td scope="row">FECHA: <strong t-field="move.date_expected" t-field-options="{'format': 'dd-MM-yyyy'}"/></td>
                                         <td colspan="2">MODIFICACION DE INGENIERIA:</td>
                                     </tr>
                                 </tbody>
@@ -312,14 +312,14 @@
                     <tr>
                     <td> <div class="col-sm-10 text-left" style="font-size: 7px !important;">
                     <t t-set="nro_tarjeta" t-value="datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%y')+''+datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%m')+''+datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%d')+''+(str(i)[2:])" />
-                    N° DE TARJETA(S):  <span t-esc="nro_tarjeta"/>
+                    N° DE TARJETA(S):  <strong t-esc="nro_tarjeta"/>
                     <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', nro_tarjeta, 600, 100)" style="width:200px;height:20px"/>
                       <t t-set="i" t-value="i+0.001"/>
                       </div>
                       </td>
                       <td>
                         <div class="col-sm-10 text-left" style="font-size: 7px !important;">
-                          LOTE N°(H):  <span t-field="active_move_line_ids.lot_id"/>
+                          LOTE N°(H):  <strong t-field="active_move_line_ids.lot_id"/>
                           <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', active_move_line_ids.lot_id, 600, 100)" style="width:200px;height:20px"/>
                         </div>
                       </td>
