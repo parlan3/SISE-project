@@ -154,7 +154,7 @@
                           <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.order_ref.client_order_ref, 600, 100)" style="width:200px;height:20px"/>
                         </div>
                       </td>
-                      <td style="padding: 0px !important;">
+                      <td style="padding: 0px !important; margin: 0px !important;">
                         <div class="col-sm-10 text-left" style="font-size: 6px !important; padding: 0px !important;">
                           <table class="table table-bordered" style="padding: 0px !important; margin: 0px !important;">
                                 <tbody style="padding: 0px !important; margin: 0px !important;">
@@ -289,24 +289,29 @@
                 </td>
                     </tr>
                     <tr>
-                      <td> <div class="col-sm-10 text-left" style="font-size: 9px !important;">
-                      PROVEEDOR(V):  
-                      <strong t-field="o.sale_id.client_order_ref"/>
-                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.order_ref.client_order_ref, 600, 100)" style="width:200px;height:20px"/>
-                    </div>
-                    </td>
-                      <td>
-                        <div class="col-sm-10 text-left" style="font-size: 8px !important; padding: 1px !important;">
-                          <table class="table table-bordered" style="padding: 1px !important;">
-                                <tbody>
+                      <td style="padding: 0px !important;"> 
+                        <div class="col-sm-10 text-left" style="font-size: 9px !important;">
+                          PROVEEDOR(V):  
+                          <strong t-field="o.sale_id.client_order_ref"/>
+                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.order_ref.client_order_ref, 600, 100)" style="width:200px;height:20px"/>
+                        </div>
+                      </td>
+                      <td style="padding: 0px !important; margin: 0px !important;">
+                        <div class="col-sm-10 text-left" style="font-size: 6px !important; padding: 0px !important;">
+                          <table class="table table-bordered" style="padding: 0px !important; margin: 0px !important;">
+                                <tbody style="padding: 0px !important; margin: 0px !important;">
                                     <tr>
                                         <t t-set="peso_neto_bruto" t-value="(float(move.product_id.uom_id.factor_inv) * float(move.product_id.weight))" />
                                         <td scope="row">PESO NETO(KG): <strong><t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></strong></td>
-                                        <td>PESO BRUTO(KG): <strong><t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></strong></td>
-                                        <td>NÚMERO DE CAJAS: <strong><span t-field="active_move_line_ids.qty_done" t-options='{"widget": "float", "precision": 2}'/></strong></td>
+                                        <td>
+                                          PESO BRUTO(KG): <strong><t t-esc="peso_neto_bruto" t-options='{"widget": "float", "precision": 2}'/></strong>
+                                        </td>
+                                        <td>
+                                          NÚMERO DE CAJAS: <strong><span t-field="active_move_line_ids.qty_done" t-options='{"widget": "float", "precision": 2}'/></strong>
+                                        </td>
                                     </tr>
-                                    <tr>
-                                        <td scope="row">FECHA: <strong t-field="move.date_expected" t-field-options="{'format': 'dd-MM-yyyy'}"/></td>
+                                    <tr style="margin-bottom: 0px !important;">
+                                        <td scope="row">FECHA: <strong><span t-field="move.date_expected" t-field-options="{'format': 'dd-MM-yyyy'}"/></strong></td>
                                         <td colspan="2">MODIFICACION DE INGENIERIA:</td>
                                     </tr>
                                 </tbody>
