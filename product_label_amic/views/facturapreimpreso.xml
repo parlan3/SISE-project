@@ -102,10 +102,10 @@
                           <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', o.name, 600, 100)" style="width:200px;height:20px"/>
                         </div>
                       </td>
-                      <td>
-                        <div class="col-sm-10 text-left" style="font-size: 9px !important;">
+                      <td style="padding: 0px !important; margin: 0px !important;">
+                        <div class="col-sm-10 text-left" style="font-size: 9px !important; padding: 0px !important; margin: 0px !important;">
                         Datos a completar por calidad
-                        <table class="table table-bordered" style="padding: 0px !important; margin: 0px !important; margin-bottom: 1px !important;">
+                        <table class="table table-bordered" style="padding: 0px !important; margin: 0px !important;">
                             <tbody style="padding: 0px !important; margin: 0px !important;">
                                 <tr>
                                     <td scope="row"><strong> OK</strong></td>
@@ -114,7 +114,9 @@
                                 </tr>
                             </tbody>
                         </table>
-                        Firma Calidad: 
+                        <span style="padding-top: 0.031rem !important; padding-bottom: 0.031rem !important;">
+                          Firma Calidad: 
+                        </span>
                         </div>
                       </td>
                     </tr>
@@ -246,19 +248,23 @@
                   <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', o.name, 600, 100)" style="width:200px;height:20px"/>
                   </div>
                     </td>
-                      <td><div class="col-sm-10 text-left" style="font-size: 9px !important;">
-                      Datos a completar por calidad
-                      <table class="table table-bordered">
-                            <tbody>
+                      <td style="padding: 0px !important; margin: 0px !important;">
+                        <div class="col-sm-10 text-left" style="font-size: 9px !important; padding: 0px !important; margin: 0px !important;">
+                        Datos a completar por calidad
+                        <table class="table table-bordered" style="padding: 0px !important; margin: 0px !important;">
+                            <tbody style="padding: 0px !important; margin: 0px !important;">
                                 <tr>
                                     <td scope="row"><strong> OK</strong></td>
                                     <td><strong> NO OK </strong></td>
                                     <td>Observado</td>
                                 </tr>
                             </tbody>
-                        </table>Firma Calidad: 
+                        </table>
+                        <span style="padding-top: 0.031rem !important; padding-bottom: 0.031rem !important;">
+                          Firma Calidad: 
+                        </span>
                         </div>
-                        </td>
+                      </td>
                     </tr>
                     <tr>
                       <td colspan="2">
@@ -299,8 +305,8 @@
                           <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.order_ref.client_order_ref, 600, 100)" style="width:200px;height:20px"/>
                         </div>
                       </td>
-                      <td>
-                        <div class="col-sm-10 text-left" style="font-size: 6px !important;">
+                      <td style="padding: 0px !important; margin: 0px !important;">
+                        <div class="col-sm-10 text-left" style="font-size: 6px !important; padding: 0px !important; margin: 0px !important;">
                           <table class="table table-bordered" style="padding: 0px !important; margin: 0px !important;">
                                 <tbody style="padding: 0px !important; margin: 0px !important;">
                                     <tr>
