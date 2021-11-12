@@ -99,7 +99,7 @@
                       <td style="padding-right: 0px !important; margin-right: 0px !important;">
                         <div class="col-sm-10 text-left" style="font-size: 9px !important; padding-right: 0px !important; margin-right: 0px !important;">
                           N° DE DOCUMENTO(N):<strong t-field="o.name"/>
-                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', o.name, 800, 250)" style="width:300px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', o.name, 800, 250)" style="width:250px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
                         </div>
                       </td>
                       <td style="padding: 0px !important; margin: 0px !important;">
@@ -127,7 +127,7 @@
                           <span t-foreach="move.product_id.customer_ids" t-as="customer_id">
                             <t t-if="customer_id.name == o.partner_id">
                               <strong t-field="customer_id.product_code"/>
-                              <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', customer_id.product_code, 800, 250)" style="width:300px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                              <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', customer_id.product_code, 800, 250)" style="width:250px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
                             </t>
                           </span>
                         </div>
@@ -138,7 +138,7 @@
                       <div class="col-sm-10 text-left" style="font-size: 9px !important;padding-right: 0px !important; margin-right: 0px !important;">
                       CANTIDAD:
                       <strong t-field="move.product_id.uom_id.factor_inv"/>
-                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.product_id.uom_id.factor_inv, 800, 250)" style="width:300px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.product_id.uom_id.factor_inv, 800, 250)" style="width:250px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
                       </div>
                       </td>
                       <td> 
@@ -157,7 +157,7 @@
                         <div class="col-sm-10 text-left" style="font-size: 9px !important; padding-right: 0px !important; margin-right: 0px !important;">
                           PROVEEDOR(V):  
                           <strong t-field="o.sale_id.client_order_ref"/>
-                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.order_ref.client_order_ref, 800, 250)" style="width:300px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.order_ref.client_order_ref, 800, 250)" style="width:250px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
                         </div>
                       </td>
                       <td style="padding: 0px !important; margin: 0px !important;">
@@ -188,14 +188,14 @@
                     <div class="col-sm-10 text-left" style="font-size: 9px !important; padding-right: 0px !important; margin-right: 0px !important;">
                     <t t-set="nro_tarjeta" t-value="datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%y')+''+datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%m')+''+datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%d')+''+(str(i)[2:])" />
                     N° DE TARJETA(S):  <strong t-esc="nro_tarjeta"/>
-                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', nro_tarjeta, 800, 250)" style="width:300px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', nro_tarjeta, 800, 250)" style="width:250px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
                       <t t-set="i" t-value="i+0.001"/>
                       </div>
                       </td>
                       <td style="padding-right: 0px !important; margin-right: 0px !important;">
                         <div class="col-sm-10 text-left" style="font-size: 9px !important; padding-right: 0px !important; margin-right: 0px !important;">
                           LOTE N°(H):  <strong t-field="active_move_line_ids.lot_id"/>
-                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', active_move_line_ids.lot_id, 800, 250)" style="width:300px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', active_move_line_ids.lot_id, 800, 250)" style="width:250px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
                         </div>
                       </td>
                     </tr>
@@ -248,7 +248,7 @@
                       <td style="padding-right: 0px !important; margin-right: 0px !important;">
                         <div class="col-sm-10 text-left" style="font-size: 9px !important; padding-right: 0px !important; margin-right: 0px !important;">
                           N° DE DOCUMENTO(N):<strong t-field="o.name"/>
-                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', o.name, 800, 250)" style="width:300px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', o.name, 800, 250)" style="width:250px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
                         </div>
                       </td>
                       <td style="padding: 0px !important; margin: 0px !important;">
@@ -276,7 +276,7 @@
                           <span t-foreach="move.product_id.customer_ids" t-as="customer_id">
                             <t t-if="customer_id.name == o.partner_id">
                               <strong t-field="customer_id.product_code"/>
-                              <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', customer_id.product_code, 800, 250)" style="width:300px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                              <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', customer_id.product_code, 800, 250)" style="width:250px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
                             </t>
                           </span>
                         </div>
@@ -287,7 +287,7 @@
                         <div class="col-sm-10 text-left" style="font-size: 9px !important; padding-right: 0px !important; margin-right: 0px !important;">
                           CANTIDAD:
                           <strong t-field="move.product_id.uom_id.factor_inv"/>
-                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.product_id.uom_id.factor_inv, 800, 250)" style="width:300px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.product_id.uom_id.factor_inv, 800, 250)" style="width:250px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
                         </div>
                       </td>
                       <td> 
@@ -306,7 +306,7 @@
                         <div class="col-sm-10 text-left" style="font-size: 9px !important; padding-right: 0px !important; margin-right: 0px !important;">
                           PROVEEDOR(V):  
                           <strong t-field="o.sale_id.client_order_ref"/>
-                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.order_ref.client_order_ref, 800, 250)" style="width:300px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', move.order_ref.client_order_ref, 800, 250)" style="width:250px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
                         </div>
                       </td>
                       <td style="padding: 0px !important; margin: 0px !important;">
@@ -337,14 +337,14 @@
                       <div class="col-sm-10 text-left" style="font-size: 9px !important; padding-right: 0px !important; margin-right: 0px !important;">
                         <t t-set="nro_tarjeta" t-value="datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%y')+''+datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%m')+''+datetime.datetime.strptime(move.date_expected, '%Y-%m-%d %H:%M:%S').strftime('%d')+''+(str(i)[2:])" />
                         N° DE TARJETA(S):  <strong t-esc="nro_tarjeta"/>
-                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', nro_tarjeta, 800, 250)" style="width:300px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', nro_tarjeta, 800, 250)" style="width:250px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
                         <t t-set="i" t-value="i+0.001"/>
                       </div>
                     </td>
                       <td style="padding-right: 0px !important; margin-right: 0px !important;">
                         <div class="col-sm-10 text-left" style="font-size: 9px !important; padding-right: 0px !important; margin-right: 0px !important;">
                           LOTE N°(H):  <strong t-field="active_move_line_ids.lot_id"/>
-                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', active_move_line_ids.lot_id, 800, 250)" style="width:300px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', active_move_line_ids.lot_id, 800, 250)" style="width:250px;height:20px; padding-right: 0px !important; margin-right: 0px !important;"/>
                         </div>
                       </td>
                     </tr>
