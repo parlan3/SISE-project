@@ -127,7 +127,7 @@
                           <span t-foreach="move.product_id.customer_ids" t-as="customer_id">
                             <t t-if="customer_id.name == o.partner_id">
                               <strong t-field="customer_id.product_code"/>
-                              <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', customer_id.product_code, 800, 250)" style="width:250px;height:25px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                              <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', customer_id.product_code, 800, 250)" style="width:300px;height:30px; padding-right: 0px !important; margin-right: 0px !important;"/>
                             </t>
                           </span>
                         </div>
@@ -276,7 +276,7 @@
                           <span t-foreach="move.product_id.customer_ids" t-as="customer_id">
                             <t t-if="customer_id.name == o.partner_id">
                               <strong t-field="customer_id.product_code"/>
-                              <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', customer_id.product_code, 800, 250)" style="width:250px;height:25px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                              <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Standard39', customer_id.product_code, 800, 250)" style="width:300px;height:30px; padding-right: 0px !important; margin-right: 0px !important;"/>
                             </t>
                           </span>
                         </div>
