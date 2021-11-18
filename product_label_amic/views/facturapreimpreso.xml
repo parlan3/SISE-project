@@ -306,7 +306,7 @@
                         <div class="col-sm-10 text-left" style="font-size: 9px !important; padding-right: 0px !important; margin-right: 0px !important;">
                           PROVEEDOR(V):  
                           <strong t-field="o.sale_id.client_order_ref"/>
-                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.sale_id.client_order_ref, 800, 250)" style="width:250px;height:25px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', (str(o.sale_id.client_order_ref)[3:]), 800, 250)" style="width:250px;height:25px; padding-right: 0px !important; margin-right: 0px !important;"/>
                         </div>
                       </td>
                       <td style="padding: 0px !important; margin: 0px !important;">
