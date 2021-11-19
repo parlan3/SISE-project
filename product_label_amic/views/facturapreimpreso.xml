@@ -80,7 +80,7 @@
                       </td>
                       <td>
                       <div style="width: 30%;float: right;">
-                          <img src='/web/binary/company_logo' style="width:50%"/>
+                          <img src='/web/binary/company_logo' style="width:70%"/>
                       </div>
                       <div class="col-sm-10 text-left" style="font-size: 9px !important;">
                       Direccion del proveedor:
@@ -156,9 +156,18 @@
                       <td style="padding-right: 0px !important; margin-right: 0px !important;"> 
                         <div class="col-sm-10 text-left" style="font-size: 9px !important; padding-right: 0px !important; margin-right: 0px !important;">
                           
+                          <t t-if="o.sale_id.client_order_ref">
+                          
                           PROVEEDOR(V):  
                           <strong t-esc="o.sale_id.client_order_ref[3:]"/>
                           <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.sale_id.client_order_ref[3:], 800, 250)" style="width:250px;height:25px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                        </t>
+                        <t t-else="">
+                          PROVEEDOR(V):  
+                          <strong t-esc="o.sale_id.client_order_ref"/>
+                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.sale_id.client_order_ref, 800, 250)" style="width:250px;height:25px; padding-right: 0px !important; margin-right: 0px !important;"/>
+                        
+                        </t>
                         </div>
                       </td>
                       <td style="padding: 0px !important; margin: 0px !important;">
@@ -230,7 +239,7 @@
                       </td>
                       <td>
                       <div style="width: 30%;float: right;">
-                          <img src='/web/binary/company_logo' style="width:50%"/>
+                          <img src='/web/binary/company_logo' style="width:70%"/>
                       </div>
                       <div class="col-sm-10 text-left" style="font-size: 9px !important;">
                       Direccion del proveedor:
