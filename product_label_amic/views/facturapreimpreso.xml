@@ -320,9 +320,6 @@
                         </t>
                         <t t-else="">
                           PROVEEDOR(V):  
-                          <strong t-esc="o.sale_id.client_order_ref"/>
-                          <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.sale_id.client_order_ref, 800, 250)" style="width:250px;height:25px; padding-right: 0px !important; margin-right: 0px !important;"/>
-                        
                         </t>
                         </div>
                       </td>
